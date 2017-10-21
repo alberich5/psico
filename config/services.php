@@ -4,7 +4,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Third Party Services
+    | Third Party Services juegos de servicios de la app mejorandola
     |--------------------------------------------------------------------------
     |
     | This file is for storing the credentials for third party services such

@@ -109,7 +109,7 @@ return [
     | If you are using Markdown based email rendering, you may configure your
     | theme and component paths here, allowing you to customize the design
     | of the emails. Or, you may simply stick with the Laravel defaults!
-    |
+    | esto esta dentro de lo permitido para que le usuaio lo pueda modificar dentro de lo posible que uno logre hacerlo dentrob del sistema de produccion de elementos que se integran al may
     */
 
     'markdown' => [

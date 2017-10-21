@@ -1,4 +1,4 @@
-<form method="POST" v-on:submit.prevent="createKeep">
+<form method="POST" v-on:submit.prevent="crearComentario">
 <div class="modal fade" id="create">
 	<div class="modal-dialog">
 		<div class="modal-content">

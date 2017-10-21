@@ -10,8 +10,8 @@ class ExampleTest extends TestCase
 {
     /**
      * A basic test example.
-     *
-     * @return void
+     * Esto es el template para que funcione perfcatamente la  configuracion d ela apploicaciom del localhost
+     * @return void este metodo funciona pperfectamente
      */
     public function testBasicTest()
     {

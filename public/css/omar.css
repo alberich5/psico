@@ -1,0 +1,116 @@
+.omar{
+	background-color: white;
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 10%;
+	border-radius: 5px;
+	box-shadow: 0 0 15px 0 black;
+	padding: 5px;
+}
+#suri{
+	background-color: white;
+	border-radius: 3px;
+	box-shadow: 0 0 10px 0 black;
+	margin-top: 10%;
+	margin-bottom: 3%;
+	padding: 3px;
+	width: 95%;
+}
+#capiBusqueda{
+	background-color: white;
+	border-radius: 3px;
+	box-shadow: 0 0 10px 0 black;
+	margin-top: 3%;
+	margin-bottom: 1%;
+	padding: 3px;
+	width: 45%;
+}
+#capiAgenda{
+	background-color: white;
+	border-radius: 3px;
+	box-shadow: 0 0 10px 0 black;
+	margin-top: 10%;
+	margin-bottom: 3%;
+	padding: 3px;
+	width: 45%;
+}
+#capiAgenda2{
+	background-color: white;
+	border-radius: 3px;
+	box-shadow: 0 0 10px 0 black;
+	margin-top: 3%;
+	margin-bottom: 3%;
+	padding: 3px;
+	width: 75%;
+}
+#capiList{
+	background-color: white;
+	border-radius: 3px;
+	box-shadow: 0 0 10px 0 black;
+	margin-top: 10%;
+	margin-bottom: 3%;
+	padding: 3px;
+	width: 45%;
+	margin-left: 20%;
+}
+
+#tabla-ele{
+	background-color: white;
+	box-shadow: 0 0 10px 0 black;
+}
+
+#contenedorFormulario{
+	width: 30%;
+	padding: 5px;
+	margin-left: 3%;
+
+}
+#boton{
+	height: 50px;
+	font-size: 12px;
+}
+.tabla{
+	background-color: white;
+	width: 90%;
+	font-size: 10px !important;
+	text-align: center;
+}
+
+.fondo {
+  background:url(fondo.jpg)  no-repeat center fixed;
+  
+  background-size: cover;
+  position:relative;
+  
+}
+
+.fondo2 {
+  background:url(mar.jpg)  no-repeat center fixed;
+  
+  background-size: cover;
+  position:relative;
+  
+}
+
+.login{
+	width: 70%;
+	margin-top: 10%;
+}
+.fondocapacitacion{
+	background:url(fondo.jpg)  no-repeat center fixed;
+
+  background-size: cover;
+  position:relative;
+}
+#boton{
+	width: 200px !important;
+	width: 200px !important;
+}
+#fecha{
+	text-align: center;
+	color:white;
+	float: right;
+	width: 30%;
+}
+
+/***estilos para la tabla de busqueda*s*/

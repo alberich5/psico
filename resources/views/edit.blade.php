@@ -1,5 +1,5 @@
-<form method="POST" v-on:submit.prevent="updateKeep(fillKeep.id)">
-<div class="modal fade" id="edit">
+<form method="POST" v-on:submit.prevent="actualizarComentario(fillKeep.id)">
+<div class="modal fade" id="modalEditar">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
