@@ -12,9 +12,11 @@
     <title>Laravel</title>
 
     <!-- Styles -->
-    <link href="http://172.16.0.49/css/app.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
-    
+    <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/toastr.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/psicologia.css') }}" rel="stylesheet" type="text/css">
+
+
 
 
 
@@ -44,8 +46,8 @@
                     <!-- Left Side Of Navbar -->
                     <ul  class="nav navbar-nav">
 
-                        
-                       
+
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -63,8 +65,8 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
            <center><h2>Welcome Psicologia</h2></center>
-               
-                @yield('psicologia')    
+
+                @yield('psicologia')
             </div>
         </div>
     </div>
@@ -76,9 +78,11 @@
     <!-- Scripts -->
 
    {!!Html::script('js/jquery.js')!!}
+   {!!Html::script('js/bootstrap.js')!!}
+   {!!Html::script('js/toastr.js')!!}
    {!!Html::script('js/vue.js')!!}
    {!!Html::script('js/axios.js')!!}
-   @yield('js') 
-        
+   @yield('js')
+
 </body>
 </html>

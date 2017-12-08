@@ -1,18 +1,19 @@
 @extends('Psicologia.plantillaPsicologia')
 
 @section('psicologia')
-<div id="sucursal">
-	<div class="col-xs-8" style="background-color: yellow">
+<div id="app">
+	<div class="col-xs-8" >
 		@include('Psicologia.curso.partials.formularioProgramacionLoc')
-		
-	<div class="col-xs-5">
-			<ul v-for="sucursal in sucursales">
-				<li>@{{ sucursal.nombre_sucursal}}</li>
-			</ul>
-		</div>
+		<br>
+		@include('Psicologia.curso.partials.tabla')
+
+		@include('Psicologia.curso.partials.modalBuscar')
+
+
 		<div class="col-xs-7">
         	<pre>@{{$data}}</pre>
     	</div>
+
 </div>
 
 
@@ -21,20 +22,27 @@
 @section('js')
 <script>
 	new Vue({
-	el: '#sucursal',
+	el: '#app',
 	created: function() {
-		this.mostrarSucursales();
+		this.mostrarSucursal();
+		this.mostrarDependencias();
 	},
 	data: {
 		sucursales: [],
-		delegacionActual:''
+		delegacionActual:'',
+		imparte:'',
+		fecha:''
 	},
 	methods: {
-		mostrarSucursales: function() {
-			var urlSucursal = 'sucursal';
-			axios.get(urlSucursal).then(response => {
-				this.sucursales = response.data
-			});
+		mostrarSucursal: function(){
+			toastr.success('entro a mostrar sucursales');
+		},
+		mostrarDependencias: function(){
+			toastr.info('entro a mostrar depencias');
+		},
+		mostrarModal: function(){
+			$('#mocalbuscar').modal('show');
+			toastr.info('mostrar Modal');
 		}
 	}
 });
