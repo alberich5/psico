@@ -36,6 +36,7 @@
 	data: {
 		sucursales: [],
 		instituciones: [],
+		elementosEncontrados: [],
 		delegacionActual:'',
 		imparte:'',
 		fecha:''
@@ -56,9 +57,14 @@
 				this.instituciones = response.data
 				toastr.success('Instituciones encontradas');
 			});
-
-
 		},
+		busquedaElemento: function() {
+	    //var urlBuscarElemento = 'buscarElemento?delegacion=Pinotepa%20Nacional';
+	    var urlBuscarElemento = 'buscarElemento?delegacion=' + this.delegacionActual;
+	    axios.get(urlBuscarElemento).then(response => {
+	      this.elementosEncontrados = response.data
+	    });
+	  },
 		mostrarDependencias: function(){
 			toastr.info('entro a mostrar depencias');
 		},

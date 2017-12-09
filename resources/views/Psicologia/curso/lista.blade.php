@@ -43,6 +43,13 @@
 	},
   mostrarPolicias: function(){
     alert("esta funcionando");
+  },
+  busquedaElemento: function() {
+    //var urlBuscarElemento = 'buscarElemento?delegacion=Pinotepa%20Nacional';
+    var urlBuscarElemento = 'buscarElemento?delegacion=' + this.delegacionActual;
+    axios.get(urlBuscarElemento).then(response => {
+      this.elementosEncontrados = response.data
+    });
   }
 });
 </script>

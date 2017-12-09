@@ -2,8 +2,10 @@
     	<div class="col-lg-10 col-md-10 col-sm-6 col-xs-12">
     		<div class="form-group">
             	<label for="dependencia">Dependencia</label>
-              <select name="dependencia" class="form-control" v-model="delegacionActual">
-	            		<option value="">delegacion</option>
+              <select name="dependencia" class="form-control">
+	            		<option :value="sucursal.nombre" v-for="sucursal in sucursales" v-model="delegacionActual">
+                    @{{ sucursal.nombre }}
+                  </option>
             	</select>
             </div>
     	</div>
