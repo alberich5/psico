@@ -2,15 +2,16 @@
 
 @section('psicologia')
 <center><h3>listar Elementos</h3></center>
-<div class="panel panel-primary">
-  <div class="panel-heading">
-    <h3 class="panel-title">Panel title</h3>
-  </div>
-  <div class="panel-body">
-    Panel content
-  </div>
-</div>
+
 <div id="sucursal">
+  <div class="panel panel-primary" >
+    <div class="panel-heading">
+      <h3 class="panel-title">Programacion Loc</h3>
+    </div>
+    <div class="panel-body">
+      @include('Psicologia.curso.partials.lista')
+    </div>
+  </div>
 		<div class="col-xs-5">
 			<ul v-for="elemento in elementos">
 				<li>@{{ elemento}}</li>
@@ -39,7 +40,10 @@
 				this.elementos = response.data
 			});
 		}
-	}
+	},
+  mostrarPolicias: function(){
+    alert("esta funcionando");
+  }
 });
 </script>
 @endsection

@@ -46,7 +46,3 @@ Route::get('psicologia-lista',['uses'=>'PsicologiaController@lista']);
 Route::get('recursos',['uses'=>'RecursosHumanosController@home']);
 
 Route::resource('tasks', 'TaskController', ['except' => 'show', 'create', 'edit']);
-
-
-
-

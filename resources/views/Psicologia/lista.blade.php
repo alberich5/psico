@@ -7,7 +7,7 @@
     <h3 class="panel-title">Programacion Loc</h3>
   </div>
   <div class="panel-body">
-    
+
   </div>
 </div>
 <div id="sucursal">
@@ -38,7 +38,10 @@
 			axios.get(urlMostrarElementos).then(response => {
 				this.elementos = response.data
 			});
-		}
+		},
+    mostrarAccion: function(){
+      alert("alertamostrada");
+    }
 	}
 });
 </script>

@@ -13,7 +13,7 @@ use App\Sucursal_historico;
 
 class PsicologiaController extends Controller
 {
-    
+
 
     public function home(){
 
@@ -32,7 +32,7 @@ class PsicologiaController extends Controller
     //Traer la informacio de Delegacion
      public function sucursal()
     {
-        $sucursal = Sucursal::select('id','nombre_sucursal')->get();
+        $sucursal = Sucursal::select('id','nombre')->get();
 
         return$sucursal;
     }
@@ -40,7 +40,7 @@ class PsicologiaController extends Controller
     //Traer la informacion de los elementos disponibles
     public function buscarElementos()
     {
-    	
+
     	$elemento = elemento_policial::where('elemento_policial_reingreso_id')->take(10)->get();
         $sucursal = Sucursal::orderBy('id', 'DESC')->take(5)->get();
         $dato = Dato_personal::orderBy('id', 'DESC')->take(1)->get();
