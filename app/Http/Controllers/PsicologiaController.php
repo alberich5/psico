@@ -41,7 +41,7 @@ class PsicologiaController extends Controller
     public function buscarElementos()
     {
 
-    	$elemento = elemento_policial::where('elemento_policial_reingreso_id')->take(10)->get();
+    	$elemento = elemento_policial::where('elemento_policial_reingreso_id')->take(50)->get();
         $sucursal = Sucursal::orderBy('id', 'DESC')->take(5)->get();
         $dato = Dato_personal::orderBy('id', 'DESC')->take(1)->get();
         //dd($elemento);

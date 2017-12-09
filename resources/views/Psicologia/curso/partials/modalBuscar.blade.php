@@ -15,7 +15,7 @@
                   <input type="text" name="imparte" required class="form-control" placeholder="Nombre Elemento Policial" style="text-transform: uppercase;" v-model="nomElemento"><br>
                   <input type="text" name="imparte" required class="form-control" placeholder="Apellido Paterno Elemento Policial" style="text-transform: uppercase;" v-model="APelemento"><br>
                   <input type="text" name="imparte" required class="form-control" placeholder="Apellido Materno Elemento Policial" style="text-transform: uppercase;" v-model="AMelemento"><br>
-                  <input type="submit" name="buscar" value="Buscar" class="btn btn-primary">
+                  <input type="submit" name="buscar" value="Buscar" class="btn btn-primary" v-on:click.prevent="busquedaElemento()">
                 </div>
         	</div>
 				</div>
