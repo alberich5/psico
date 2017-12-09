@@ -37,6 +37,7 @@
 		sucursales: [],
 		instituciones: [],
 		elementosEncontrados: [],
+		elementosEncontradosTux: [],
 		delegacionActual:'',
 		imparte:'',
 		fecha:''
@@ -65,6 +66,14 @@
 	      this.elementosEncontrados = response.data
 	    });
 	  },
+		busquedaElementoTux: function() {
+	    //var urlBuscarElemento = 'buscarElemento?delegacion=Pinotepa%20Nacional';
+	    var urlBuscarElemento = 'buscarElemento?delegacion=Tuxtepec';
+	    axios.get(urlBuscarElemento).then(response => {
+	      this.elementosEncontradosTux = response.data
+	    });
+	  },
+
 		mostrarDependencias: function(){
 			toastr.info('entro a mostrar depencias');
 		},

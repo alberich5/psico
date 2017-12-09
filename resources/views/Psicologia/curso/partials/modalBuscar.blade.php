@@ -35,10 +35,10 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr  v-for="encontrado in elementosEncontradosTux">
             <th scope="row">717</th>
             <td><img src="{{ asset('img/1.png') }}" width="80px"> </td>
-            <td>Otto</td>
+            <td>>@{{ encontrado.id }}</td>
             <td>marft</td>
             <td>Mark</td>
             <td>jui</td>
