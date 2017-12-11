@@ -31,4 +31,4 @@
             </div>
     	</div>
 </div>
-<input type="submit" name="" value="cargar elementos" v-on:click.prevent="busquedaElemento()">
+<input type="submit" name="" value="cargar elementos" v-on:click.prevent="busquedaElementoTux()">

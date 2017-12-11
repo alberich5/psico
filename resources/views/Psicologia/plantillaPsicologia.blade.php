@@ -15,7 +15,7 @@
     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/toastr.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/psicologia.css') }}" rel="stylesheet" type="text/css">
-
+    @yield('css')
 
 
 

@@ -26,8 +26,10 @@ Route::get('institucion',['uses'=>'CapacitacionController@institucion']);
 Route::get('sucursal',['uses'=>'PsicologiaController@sucursal']);
 Route::get('buscarElemento',['uses'=>'PsicologiaController@buscarElementos']);
 
+Route::get('buscarElemento',['uses'=>'PsicologiaController@buscarElementos']);
 
 
+Route::get('searchElemento',['uses'=>'PsicologiaController@searchUsuario']);
 
 
 
@@ -42,6 +44,8 @@ Route::get('capacitacion-agenda',['uses'=>'CapacitacionController@agenda']);
 Route::get('psicologia',['uses'=>'PsicologiaController@home']);
 Route::get('psicologia-captura',['uses'=>'PsicologiaController@captura']);
 Route::get('psicologia-lista',['uses'=>'PsicologiaController@lista']);
+
+Route::get('psicologia-prueba',['uses'=>'PsicologiaController@prueba']);
 
 Route::get('recursos',['uses'=>'RecursosHumanosController@home']);
 
