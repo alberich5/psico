@@ -47,7 +47,7 @@
 	},
 	methods: {
 		mostrarSucursal: function(){
-			var urlSucursales = 'sucursal';
+			var urlSucursales = 'http://localhost/final/sucursal.txt';
 			axios.get(urlSucursales).then(response => {
 				this.sucursales = response.data
 				toastr.success('Sucursales buscadas');
@@ -129,19 +129,13 @@
                       this.searchUsuario.materno='';
                         toastr.success('Busqueda exitosa');//mensaje
 
-
                         //
                        ///
                     }).catch(error=>{
                       this.errors=error.response.data
 
                     });
-
-
-
                 },
-
-
 
 		mostrarDependencias: function(){
 			toastr.info('entro a mostrar depencias');

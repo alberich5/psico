@@ -1,4 +1,4 @@
-@extends('Psicologia.plantillaPsicologia')
+@extends('Psicologia.planti')
 
 @section('css')
 <link href="{{asset('css/jquery.dataTables.min.css')}}" rel="stylesheet" type="text/css">
@@ -18,7 +18,7 @@
 
                   <div class="panel panel-default col-sm-10 col-sm-offset-1" id="contenedorUsuario">
                   <!--      inicio Wizard container        -->
-                  <div class="panel-heading" id="titulo"> <h3 align="center" id="tituloText">ELEMENTOS</h3></div>
+                  <div class="panel-heading" id="titulo"> <h3 align="center" id="tituloText">ELEMENTOS PSICOLOGIA</h3></div>
 
             </br>
             </br>
@@ -32,39 +32,20 @@
                             <div class=" col-sm-6 form-group">
 
                                 <div class="input-group col-md-8 col-md-offset-1">
-                                    <span class="input-group-addon" id="basic-addon1">
-                                      <i class="material-icons md-18">account_circle</i>
-                                    </span>
-
+                                    <label for="">ID</label>
                                     <input id="id" type="id" class="form-control" name="id"  autofocus placeholder="ID" aria-describedby="basic-addon1"  v-model="searchUsuario.id">
 
                                </div>
                             </div>
                         </div>
 
-                        <div class="row">
-
-                            <div class=" col-sm-6  form-group ">
-
-                                <div class=" input-group col-md-8 col-md-offset-1">
-                                    <span class="input-group-addon" id="basic-addon1">
-                                      <i class="material-icons md-18">person</i>
-                                    </span>
-
-                                    <input id="rfc" type="rfc" class="form-control" name="rfc" value=""  autofocus placeholder="RFC" aria-describedby="basic-addon1" style="text-transform:uppercase;" v-model="searchUsuario.rfc" >
-
-                               </div>
-                            </div>
-                        </div>
 
                         <div class="row">
 
                             <div class=" col-sm-6  form-group ">
 
                                 <div class=" input-group col-md-8 col-md-offset-1">
-                                    <span class="input-group-addon" id="basic-addon1">
-                                      <i class="material-icons md-18">person</i>
-                                    </span>
+                                   <label for="nombre">Nombre</label>
 
                                     <input id="nombre" type="nombre" class="form-control" name="nombre" value=""  autofocus placeholder="Nombre" aria-describedby="basic-addon1" style="text-transform:uppercase;" v-model="searchUsuario.nombre" >
 
@@ -78,9 +59,7 @@
                             <div class=" col-sm-6  form-group ">
 
                                 <div class=" input-group col-md-8 col-md-offset-1">
-                                    <span class="input-group-addon" id="basic-addon1">
-                                      <i class="material-icons md-18">person</i>
-                                    </span>
+                                    <label for="paterno">Paterno</label>
 
                                     <input id="paterno" type="paterno" class="form-control" name="paterno" value=""  autofocus placeholder="Apellido paterno" aria-describedby="basic-addon1" style="text-transform:uppercase;"  v-model="searchUsuario.paterno">
 
@@ -94,9 +73,7 @@
                             <div class=" col-sm-6 form-group ">
 
                                 <div class=" input-group col-md-8 col-md-offset-1">
-                                    <span class="input-group-addon" id="basic-addon1">
-                                      <i class="material-icons md-18">person</i>
-                                    </span>
+                                   <label for="materno">Materno</label>
 
                                     <input id="materno" type="materno" class="form-control" name="materno" value=""  autofocus placeholder="Apellido materno" aria-describedby="basic-addon1" style="text-transform:uppercase;"  v-model="searchUsuario.materno" >
 
@@ -114,14 +91,9 @@
                         <div class="row col-sm-offset-1">
 
 
-                                <input type="submit" class="btn btn-primary btn-sm" value="buscar">
-                                <input type="submit" class="btn btn-aceptar btn-sm " value="agregar">
+                                <input type="submit" class="btn btn-primary" value="BUSCAR">
 
-                                <input type="submit" class="btn btn-editar2 btn-sm " value="editar">
-                                <input type="submit" class="btn btn-ver btn-sm" value="ver">
-                                <input type="submit" class="btn btn-cancelar btn-sm" value="cancelar" v-on:click.prevent="cancelar()">
-                                <input type="submit" class="btn btn-eliminar btn-sm" value="eliminar">
-                                <input type="submit" class="btn btn-guardar btn-sm" value="guardar">
+
 
 
                         </div>
@@ -134,14 +106,7 @@
                       <!--      tabla usuarios      -->
 
 
-                        <div class="col-lg-10 col-md-10 col-sm-6 col-xs-12">
-                    <div class="form-group">
-
-                          Buscar : <input class="form-control" v-model="search">
-
-                        </div>
-                  </div>
-
+                      Buscar : <input v-model="search">
                       <hr>
                       <data-table :users="filteredUsers"></data-table>
 
@@ -152,7 +117,8 @@
                                 </div>
                     </div>
  -->
-                    
+
+                    @include('Psicologia.curso.show')
 </div>
 
 
@@ -268,10 +234,12 @@ Vue.component('data-table', {
       headers: [
         { title: 'OPCIONES' },
         { title: 'ID'  },
+        { title: 'FOTO'  },
         { title: 'NOMBRE'},
         { title: 'APELLIDO PATERNO' },
         { title: 'APELLIDO MATERNO'  },
         { title: 'SUCURSAL' , class: 'some-special-class sorting' }
+
 
       ],
       rows: [] ,
@@ -291,17 +259,17 @@ Vue.component('data-table', {
         row.push(
 
 
-          "<a href='#'' class='btn btn-warning btn-sm' data-tooltip='VER' title='Ver informacion elemento' onclick='"+"ver("+item.id_elemento+")'"+"> <i class='material-icons md-18'>visibility</i></a>&nbsp;"+
-          "<a  href='#'' class='btn btn-danger btn-sm' data-tooltip='AGREGAR' title='Agregar vacaciones' onclick='"+"editar("+item.id_elemento+")'"+"><i class='material-icons md-18'>add_circle_outline</i></a>&nbsp;"+
-          "<a href='#'' class='btn btn-success btn-sm' data-tooltip='HISTORIAL' title='Historial' onclick='"+"historial("+item.id_elemento+")'"+"><i class='material-icons md-18'>list</i></a>"
+          "<a href='#'' class='btn btn-success btn-sm' data-tooltip='VER' title='agregar' onclick='"+"ver("+item.id_elemento+")'"+">Agregar</a> "
         );
 
 
         row.push(item.id_elemento);
+        row.push("<img src='{{ asset('sipab/2/Fotografia.jpg') }}'' width='80px'>");
         row.push(item.nombre);
         row.push(item.apellido_paterno);
         row.push(item.apellido_materno);
         row.push(item.sub_delegacion);
+
 
         vm.rows.push(row);
       });
@@ -636,7 +604,7 @@ idPermisoImprimir:''
                   swal(
                   'Oops...',
                   'Something went wrong!',
-                  'error'
+                  'success'
                 );
                 }
 

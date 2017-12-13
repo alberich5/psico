@@ -18,7 +18,7 @@
     <td>BRENDA DENISE HERNANDEZ CALDERON CECILIA MORALES GONZALES ADRIAN SANCHEZ CRUZ JOSE ROBERTO LUIS RAMIREZ</td>
     <td>19/01/2016</td>
     <td>Si</td>
-    <td><button type="button" name="button" class="btn btn-primary" v-on:click.prevent="mostrarAccion">mostrar</button> </td>
+    <td><button type="button" name="button" class="btn btn-primary" v-on:click.prevent="mostrarPolicias()">mostrar</button> </td>
 
   </tr>
   <tr>
@@ -28,7 +28,7 @@
     <td>BRENDA DENISE HERNANDEZ CALDERON CECILIA MORALES GONZALES ADRIAN SANCHEZ CRUZ JOSE ROBERTO LUIS RAMIREZ</td>
     <td>19/01/2016</td>
     <td>Si</td>
-    <td><button type="button" name="button" class="btn btn-primary">mostrar</button> </td>
+    <td><button type="button" name="button" class="btn btn-primary" v-on:click.prevent="mostrarPolicias()">mostrar</button> </td>
 
   </tr>
   <tr>
@@ -38,7 +38,7 @@
     <td>BRENDA DENISE HERNANDEZ CALDERON CECILIA MORALES GONZALES ADRIAN SANCHEZ CRUZ JOSE ROBERTO LUIS RAMIREZ</td>
     <td>19/01/2016</td>
     <td>Si</td>
-    <td><button type="button" name="button" class="btn btn-primary">mostrar</button> </td>
+    <td><button type="button" name="button" class="btn btn-primary" v-on:click.prevent="mostrarPolicias()">mostrar</button> </td>
 
   </tr>
 </tbody>

@@ -1,6 +1,7 @@
 @extends('Psicologia.plantillaPsicologia')
 
 @section('psicologia')
+  @include('Psicologia.curso.partials.modalLista')
 <center><h3>listar Elementos</h3></center>
 
 <div id="sucursal">
@@ -28,10 +29,12 @@
 	new Vue({
 	el: '#sucursal',
 	created: function() {
-		this.mostrarElementos();
+
 	},
 	data: {
-		elementos: ['elemento1','elemento2','elemento3','elemento4']
+		elementos: ['elemento1','elemento2','elemento3','elemento4'],
+    nombre:"omar zarate"
+
 	},
 	methods: {
 		mostrarElementos: function() {
@@ -39,18 +42,21 @@
 			axios.get(urlMostrarElementos).then(response => {
 				this.elementos = response.data
 			});
-		}
-	},
-  mostrarPolicias: function(){
-    alert("esta funcionando");
-  },
-  busquedaElemento: function() {
-    //var urlBuscarElemento = 'buscarElemento?delegacion=Pinotepa%20Nacional';
-    var urlBuscarElemento = 'buscarElemento?delegacion=' + this.delegacionActual;
-    axios.get(urlBuscarElemento).then(response => {
-      this.elementosEncontrados = response.data
-    });
-  }
+		},
+    mostrarPolicias: function(){
+      $('#modalLista').modal('show');
+			toastr.info('mostrar Modal');
+    },
+    busquedaElemento: function() {
+      //var urlBuscarElemento = 'buscarElemento?delegacion=Pinotepa%20Nacional';
+      alert("esta entrando a busqueda elemento");
+      var urlBuscarElemento = 'buscarElemento?delegacion=' + this.delegacionActual;
+      axios.get(urlBuscarElemento).then(response => {
+        this.elementosEncontrados = response.data
+      });
+    }
+
+	}
 });
 </script>
 @endsection

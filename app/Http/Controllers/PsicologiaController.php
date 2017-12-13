@@ -101,15 +101,10 @@ $informacion['usuario']=$usuario;
 //$informacion['permisos']=$permisos;
 dd($informacion);
     return $informacion;
-
-
-
-
   }
 
 
-
-    //Traer la informacion de los elementos disponibles
+    //funcion para traer los elemenos disponibles de la base de datos
     public function buscarElementos()
     {
 
@@ -149,9 +144,6 @@ and elementos_policiales.estatus in ('Candidato Historico','Candidato Contratado
 
 ");
 dd($usuarios);
-
-
-
 
         return $usuarios;
     }
