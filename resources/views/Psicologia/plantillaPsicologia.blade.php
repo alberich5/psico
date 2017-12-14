@@ -18,9 +18,6 @@
     @yield('css')
 
 
-
-
-
    </head>
 <body>
     <div id="app">

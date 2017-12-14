@@ -34,8 +34,6 @@
             <td>htth</td>
             <td>grg</td>
           </tr>
-
-
         </tbody>
       </table>
 
