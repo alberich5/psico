@@ -51,8 +51,8 @@
 
 			});
 
-
 		},
+
 		mostrarInstitucione: function(){
 			var urlInstitucion = 'institucion';
 			axios.get(urlInstitucion).then(response => {
@@ -78,69 +78,11 @@
 	      this.elementosEncontradosTux = response.data
 	    });
 	  },
-		mostrarUsuario:function()
-									 {
-									 this.idElemento=document.getElementById('id_usuario_show').value;
-									  var urlBuscarElemento = 'buscarElemento';
-
-									 axios.post(url,{
-											 usuario:this.idElemento//new keep es e input
-									 }).then(response=>{
-
-										//this.permisos=response.data;
-
-
-										 this.errors=[];//listado de errores
-										 //alert(response.data);
-
-									 }).catch(error=>{
-										 this.errors=error.response.data
-
-									 });
-
-
-									 },
-
-	 busquedaUsuario:function()
-                    {
-                    this.users=[];
-                    var url='searchElemento';
-
-                    axios.post(url,{
-                        usuario:this.searchUsuario//new keep es e input
-                    }).then(response=>{
-                    //  alert(response.data.nombre);
-                     // this.usuarios=[];
-
-                      //this.users=response.data;
-
-                     this.users=response.data.usuario;
-                      //this.tablaPermisos=response.data.permisos;
-
-                      this.errors=[];//listado de errores
-                      //alert(response.data);
-                      //this.searchUsuario={'username':'','nombre':'','paterno':'','materno':''};
-                      this.searchUsuario.id='';
-                      this.searchUsuario.rfc='';
-                      this.searchUsuario.nombre='';
-                      this.searchUsuario.paterno='';
-                      this.searchUsuario.materno='';
-                        toastr.success('Busqueda exitosa');//mensaje
-
-                        //
-                       ///
-                    }).catch(error=>{
-                      this.errors=error.response.data
-
-                    });
-                },
 
 		mostrarDependencias: function(){
 			toastr.info('entro a mostrar depencias');
 		},
-		agregarElementos: funcion(){
-			alert("agregar elementos");
-		},
+
 		mostrarModal: function(){
 			$('#mocalbuscar').modal('show');
 			toastr.info('mostrar Modal');
