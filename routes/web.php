@@ -26,12 +26,7 @@ Route::get('institucion',['uses'=>'CapacitacionController@institucion']);
 Route::get('sucursal',['uses'=>'PsicologiaController@sucursal']);
 Route::get('buscarElemento',['uses'=>'PsicologiaController@buscarElementos']);
 
-Route::get('buscarElemento',['uses'=>'PsicologiaController@buscarElementos']);
-
-
 Route::get('searchElemento',['uses'=>'PsicologiaController@searchUsuario']);
-
-
 
 
 

@@ -47,6 +47,9 @@
       $('#modalLista').modal('show');
 			toastr.info('mostrar Modal');
     },
+    mostrarElementosGuardados: function(){
+      alert("se manda el mensaje de prueba");
+    },
     busquedaElemento: function() {
       //var urlBuscarElemento = 'buscarElemento?delegacion=Pinotepa%20Nacional';
       alert("esta entrando a busqueda elemento");

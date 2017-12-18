@@ -37,8 +37,9 @@ class PsicologiaController extends Controller
     //Traer la informacio de Delegacion
      public function sucursal()
     {
-        $sucursal = Sucursal::select('id','nombre')->get();
 
+        $sucursal = Sucursal::select('id','nombre_sucursal')->get();
+        dd($sucursal);
         return$sucursal;
     }
 
