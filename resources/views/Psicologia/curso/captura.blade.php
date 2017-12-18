@@ -12,7 +12,7 @@
 
 		<div class="col-xs-8">
 			<ul v-for="sucursal in sucursales">
-				<li>@{{ sucursal.nombre }}</li>
+				<li>@{{ sucursal.nombre_sucursal }}</li>
 			</ul>
 		</div>
 
@@ -31,8 +31,6 @@
 	el: '#app',
 	created: function() {
 		this.mostrarSucursal();
-		this.mostrarDependencias();
-		this.busquedaUsuario();
 	},
 	data: {
 		sucursales: [],
@@ -47,10 +45,10 @@
 	},
 	methods: {
 		mostrarSucursal: function(){
-			var urlSucursales = 'http://localhost/final/sucursal.txt';
+			var urlSucursales = 'sucursal';
 			axios.get(urlSucursales).then(response => {
 				this.sucursales = response.data
-				toastr.success('Sucursales buscadas');
+
 			});
 
 
