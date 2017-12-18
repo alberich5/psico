@@ -138,6 +138,9 @@
 		mostrarDependencias: function(){
 			toastr.info('entro a mostrar depencias');
 		},
+		agregarElementos: funcion(){
+			alert("agregar elementos");
+		},
 		mostrarModal: function(){
 			$('#mocalbuscar').modal('show');
 			toastr.info('mostrar Modal');

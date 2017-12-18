@@ -27,17 +27,16 @@ class CapacitacionController extends Controller
      public function institucion()
     {
         $institucion = Institucion::orderBy('direccion_id', 'DESC')->get();
-
-        return$institucion;
+        return $institucion;
     }
-    
+
 
     public function agenda()
     {
           $dependencia = Dependencia::all();
            $institucion = Institucion::all();
-    
-   
+
+
          return view('capacitacion.agenda',["dependencia"=>$dependencia,"institucion"=>$institucion]);
     }
 }
